@@ -6,26 +6,23 @@ struct Person: Model {
     var id: Node?
     let name: String
     let favoriteCity: String
-    let identification: Int
     
-    init(name: String, favoriteCity: String, identification: Int) {
+    init(name: String, favoriteCity: String) {
         self.name = name
         self.favoriteCity = favoriteCity
-        self.identification = identification
     }
     
     init(node: Node, in context: Context) throws {
         id = try node.extract("id")
         name = try node.extract("name")
         favoriteCity = try node.extract("favoriteCity")
-        identification = try node.extract("identification")
     }
     
     func makeNode(context: Context) throws -> Node {
         return try Node(node: ["id": id,
                                "name": name,
-                               "favoriteCity": favoriteCity,
-                               "identification": identification])
+                               "favoriteCity": favoriteCity
+                               ])
     }
     
     static func prepare(_ database: Database) throws {
@@ -33,7 +30,6 @@ struct Person: Model {
             people.id()
             people.string("name")
             people.string("favoriteCity")
-            people.int("identification")
         }
     }
     
