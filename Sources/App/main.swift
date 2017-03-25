@@ -13,7 +13,7 @@ drop.get("/hello") { request in
 }
 
 drop.get("/people") { request in
-    let people = [Person(name: "Sean", favoriteCity: "New York",identification : 1234),
+    let people = [Person(name: "Sean", favoriteCity: "New York", identification : 1234),
                 Person(name: "Tom", favoriteCity: "Philadelphia", identification : 1235),
                 Person(name: "Sara", favoriteCity: "Pittburgh", identification : 1236)]
     let friendsNode = try people.makeNode()
