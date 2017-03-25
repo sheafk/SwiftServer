@@ -18,6 +18,9 @@ drop.get("/people") { request in
                                     ["id" : 1235, "name": "Tom", "favoriteCity": "Philadelphia"],
                                     ["id" : 1236, "name": "Sara", "favoriteCity": "Pittburgh"]]
         ])
+    let friendsNode = try people.makeNode()
+    let nodeDictionary = ["people": friendsNode]
+    return try JSON(node: nodeDictionary)
 }
 drop.resource("posts", PostController())
 
