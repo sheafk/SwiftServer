@@ -13,9 +13,9 @@ drop.get("/hello") { request in
 }
 
 drop.get("/people") { request in
-    let people = [Person(identification : 1234, name: "Sean", favoriteCity: "New York"),
-                Person(identification : 1235, name: "Tom", favoriteCity: "Philadelphia"),
-                Person(identification : 1236, name: "Sara", favoriteCity: "Pittburgh")]
+    let people = [Person(name: "Sean", favoriteCity: "New York",identification : 1234),
+                Person(name: "Tom", favoriteCity: "Philadelphia", identification : 1235),
+                Person(name: "Sara", favoriteCity: "Pittburgh", identification : 1236)]
     let friendsNode = try people.makeNode()
     let nodeDictionary = ["people": friendsNode]
     return try JSON(node: nodeDictionary)
