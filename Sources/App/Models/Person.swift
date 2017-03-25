@@ -30,10 +30,10 @@ struct Person: Model {
     
     static func prepare(_ database: Database) throws {
         try database.create("people") { people in
-            friends.id()
-            friends.string("name")
-            friends.string("favoriteCity")
-            friends.int("identification")
+            people.id()
+            people.string("name")
+            people.string("favoriteCity")
+            people.int("identification")
         }
     }
     
