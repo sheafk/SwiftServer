@@ -1,16 +1,14 @@
-# Basic Template
-
-A basic vapor template for starting a new Vapor web application. If you're using vapor toolbox, you can use: `vapor new --template=basic`
-
-## 📖 Documentation
-
-Visit the Vapor web framework's [documentation](http://docs.vapor.codes) for instructions on how to use this package.
-
-## 💧 Community
-
-Join the welcoming community of fellow Vapor developers in [slack](http://vapor.team).
-
-## 🔧 Compatibility
-
-This package has been tested on macOS and Ubuntu.
 # SwiftServer
+
+This is server is written in Swift and runs on Heroku.
+
+##Features
+
+###Vapor
+SwiftServer uses Vapor's web application framework. Go to Sources >> App >> main.swift to see the implementation.
+
+###Person Model
+Go to Sources >> App >> Models >> Person to see the Person data model. This is how the data will be organized in JSON.
+
+
+
